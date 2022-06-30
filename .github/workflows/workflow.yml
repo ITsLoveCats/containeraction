@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: run the action
         id: hello
-        uses: ./action.yml
+        uses: ./
         with:
           myInput: 'Chad Crowell'
       - name: output
