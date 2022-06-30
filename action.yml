@@ -1,1 +1,16 @@
+name: Container Action
+description: Create a container from Dockerfile
 
+inputs:
+  myInput:
+    description: 'The first input'
+    required: true
+    default: 'The first default input'
+
+outputs:
+  myOutput:
+    description: 'total memory'
+
+runs: 
+  using: 'docker'
+  image: 'Dockerfile'
