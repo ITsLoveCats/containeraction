@@ -2,4 +2,4 @@
 
 echo "The input $INPUT_MYINPUT"
 MEMORY=$(cat /proc/meminfo)
-echo $MEMORY
+echo "::set-output name=memory::$MEMORY"
