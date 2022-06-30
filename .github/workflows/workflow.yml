@@ -1,1 +1,18 @@
+on: push
 
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: run the action
+        id: hello
+        uses: ./action.yml
+        with:
+          myInput: 'Chad Crowell'
+      - name: output
+        run: |
+          echo ${{ steps.hello.ouputs.memory }}
+          echo "total memory successfully output"
